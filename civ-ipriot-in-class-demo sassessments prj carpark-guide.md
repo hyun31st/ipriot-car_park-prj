@@ -458,17 +458,17 @@ Answer the following questions:
 >
 > 1. **Which class is responsible for each of the following pieces of information (and why)?**
 >    - _The number of available bays_  
->      `Answer here...`
+>      `In the Car class, we added the "available_bays" property, and I agree that the method is in the right place because all attributes(plates, capacity) are in the Car class.`
 >    - _The current temperature_  
->      `Answer here...`
+>      `Now it makes sense for this to be in the Car class. The Display class is only responsible for showing text provided by the Car class. I initially thought it would be beneficial to reduce the responsibilities of the Car class, but this setup works well.`
 >    - _The time_  
->      `Answer here...`
+>      `It would also be beneficial for this functionality to be part of the Car class. The Display and Sensor classes are aggregates or components of the Car class. Data (e.g., temperature, time) should be controlled by the Car class, making future troubleshooting easier.`
 >
 > 2. **What is the difference between an attribute and a property?**  
->    `Answer here...`
+>    `An attribute can be directly accessed, but a property behaves more like a method. There may be some steps involved in retrieving a property, or it might directly return an attribute. An attribute is used as-is, while a property provides an option to modify or validate a value.`
 >
 > 3. **Why do you think we used a dictionary to hold the data we passed the display? List at least one advantage and one disadvantage of this approach.**  
->    `Answer here...`
+>    `By using a dictionary, we can reduce the number of arguments and parameters. However, we need to write iteration code in the Display class, which makes the code a bit more complicated.`
 
 #### Add a detect vehicle method to the Sensor class
 

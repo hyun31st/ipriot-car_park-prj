@@ -38,7 +38,6 @@ class CarPark:
     def update_displays(self):
         data = {"available_bays": self.available_bays, "temperature": 25}
 
-
     @property
     def available_bays(self):
         print(len(self.plates))
