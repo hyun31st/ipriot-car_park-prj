@@ -10,6 +10,10 @@ class Display:
     def __str__(self):
         return f"Display {self.id}: Welcome to the car park."
 
+    def update(self, data):
+        for key, value in data.items():
+            print(f"{key}: {value}")
+
 if __name__ == "__main__":
     display = Display(1, 'North Metro Park')
     print(display)

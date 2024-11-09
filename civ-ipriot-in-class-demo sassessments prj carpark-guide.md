@@ -105,7 +105,7 @@ Ensure you have completed the previous table and include at least two methods an
 Include a screenshot of your GitHub repository `src/` directory **after** you have pushed your changes.
 
 ```markdown
-![Added stubs for classes](images/stubs-for-classes.png)
+![Added stubs for classes](images\stubs-for-classes.png)
 ```
 
 ### Add constructors and attributes to the classes
@@ -211,6 +211,8 @@ Ensure that you have completed the previous steps and created the appropriate ta
 s1
 s2
 ```
+
+![git tag 01](images/git_tag_01.png)
 
 ### Relate the classes
 
@@ -369,11 +371,14 @@ You may want to see the number of available bays, the current temperature, and t
 Now consider, between the `CarPark`, `Sensor`, and `Display` classes, which class is responsible for each piece of information? There's no right or wrong answer here. But you should be able to justify your answer.
 
 >Q. Which class is responsible for the number of available bays (and why)?
->
->Q. Which class is responsible for the current temperature (and why)?
->
->Q. Which class is responsible for the time (and why)?
->
+<br/> Car class should be responsible because it has all car information.
+> The Display class should handle presenting this information, as separating these responsibilities simplifies maintenance and updates to the code.<br/>
+><br/>Q. Which class is responsible for the current temperature (and why)?
+>Here's a corrected version:
+><br/> I think the Display class should be responsible for showing the current temperature. If there is a Config class, it could also be a good choice for handling this responsibility.<br/>
+><br/>Q. Which class is responsible for the time (and why)?
+><br/>Here's the corrected version:
+><br/>Same as the previous answer, I think the Display class should be responsible, unless there is a Config class. The Car class should only be responsible for managing car-related information.
 --------
 
 ##### Detour: implement available bays
