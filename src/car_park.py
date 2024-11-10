@@ -14,7 +14,7 @@ class CarPark:
         self.capacity = capacity
         self.plates = plates or []
         self.sensors = sensors or []
-        self.displays = displays
+        self.displays = displays or []
     def __str__(self):
         return f"Car park at {self.location}, with {self.capacity} bays"
 
@@ -40,7 +40,6 @@ class CarPark:
 
     @property
     def available_bays(self):
-        print(len(self.plates))
         ## The available bays will be calculated by subtracting the current number of cars from the total capacity.
         ## If the number of cars exceeds the capacity, the following code will show 0 instead of negative number
         return self.capacity - len(self.plates) if len(self.plates) < self.capacity else 0
@@ -54,3 +53,4 @@ if __name__ == "__main__":
     car_park.add_car('1E322553')
     print(car_park)
     print("available bays: ",car_park.available_bays)
+    
