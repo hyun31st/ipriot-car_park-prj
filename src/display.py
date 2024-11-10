@@ -17,4 +17,6 @@ class Display:
 if __name__ == "__main__":
     display = Display(1, 'North Metro Park')
     print(display)
+    display.update({"message": "Goodbye"})
+
 
