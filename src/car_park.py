@@ -53,4 +53,6 @@ if __name__ == "__main__":
     car_park.add_car('1E322553')
     print(car_park)
     print("available bays: ",car_park.available_bays)
+    display = Display(2, CarPark.available_bays, "Welcome!!", True)
+    display.update({"available_bays": CarPark.available_bays, "temperature": 25})
     
