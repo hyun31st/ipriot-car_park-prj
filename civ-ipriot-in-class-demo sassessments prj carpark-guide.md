@@ -713,7 +713,8 @@ if __name__ == "__main__":
 1. Add a screenshot of the output of the unit tests. If any failed, add a screenshot of the error message and a screenshot after you have fixed the errors:
 
    ```markdown
-   ![Unit tests](images/unit-tests.png)
+   ![Initial Unit tests with error](images/unit-tests-with-error.png)
+   ![Unit tests without error](images/unit-tests-without-error.png)
    ```
 
 2. Commit your changes to the local repository. Tag the commit with `s6` so your lecturer can find it:
