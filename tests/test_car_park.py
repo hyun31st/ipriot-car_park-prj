@@ -5,7 +5,7 @@ from pathlib import Path
 
 class TestCarPark(unittest.TestCase):
     def setUp(self):
-        self.car_park = CarPark("123 Example Street", 100, log_file = "new_log.txt")
+        self.car_park = CarPark("123 Example Street", 100, log_file = "new_log.txt", config_file="new_config.json")
 
     def test_car_park_initialized_with_all_attributes(self):
         self.assertIsInstance(self.car_park, CarPark)
@@ -16,6 +16,7 @@ class TestCarPark(unittest.TestCase):
         self.assertEqual(self.car_park.displays, [])
         self.assertEqual(self.car_park.available_bays, 100)
         self.assertEqual(self.car_park.log_file, Path("new_log.txt"))
+        self.assertEqual(self.car_park.config_file, Path("new_config.json"))
 
     def test_add_car(self):
         self.car_park.add_car("FAKE-001")
@@ -69,8 +70,13 @@ class TestCarPark(unittest.TestCase):
         self.assertIn("exited", last_line)  # check description
         self.assertIn("\n", last_line)  # check entry has a new line
 
+    def test_config_file_created(self):
+        self.assertTrue(Path("new_config.json").exists())
+
+
     def tearDown(self):
         Path("new_log.txt").unlink(missing_ok=True)
+        Path("new_config.json").unlink(missing_ok=True)
 
 
 if __name__ == "__main__":
