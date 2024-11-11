@@ -2,8 +2,6 @@
 from abc import ABC, abstractmethod
 import random
 
-print("Executing Sensor Class from sensor.py")
-
 class Sensor(ABC):
     def __init__(self, id, is_active, car_park):
         self.id = id

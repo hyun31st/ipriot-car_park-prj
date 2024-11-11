@@ -1,5 +1,3 @@
-print("Executing Display Class from display.py")
-
 class Display:
     def __init__(self, id, car_park, message = "", is_on = False):
         self.id = id

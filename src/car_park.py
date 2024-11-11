@@ -4,8 +4,6 @@ from pathlib import Path
 from datetime import datetime
 import json
 
-print("Executing CarPark Class from car_park.py")
-
 
 class CarPark:
     def __init__(self, location="Unknown",
