@@ -807,6 +807,8 @@ with self.assertRaises(TypeError):
 
 Commit your original test cases for the sensor class to the local repository. Tag the commit with `s8` so your lecturer can find it.
 
+![Git tag - S08](images/git_tag_08.png)
+
 ### Additional functionality: TDD
 
 You have been asked to implement the following additional functionality:
