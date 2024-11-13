@@ -31,7 +31,7 @@ class CarPark:
         return self.capacity - len(self.plates) if len(self.plates) < self.capacity else 0
 
     def __str__(self):
-        return f"Car park at {self.location}, with {self.capacity} bays"
+        return f"Car park at {self.location}, with {self.capacity} bays."
 
     def register(self, component):
         if not isinstance(component, (Sensor, Display)):
@@ -42,6 +42,20 @@ class CarPark:
         elif isinstance(component, Display):
             self.displays.append(component)
 
+    def unregister(self, display):
+        try:
+            self.displays.remove(display)
+        except ValueError:
+            pass
+
+    def update_displays(self):
+        data = {"available_bays": self.available_bays, "temperature": 25}
+        # for display in self.displays:
+        #     # print(f"updating display {display.id}")
+        #     display.update(data)
+
+
+
     def add_car(self, plate):
         self.plates.append(plate)
         self.update_displays()
@@ -51,9 +65,6 @@ class CarPark:
         self.plates.remove(plate)
         self.update_displays()
         self._log_car_activity(plate, "exited")
-
-    def update_displays(self):
-        data = {"available_bays": self.available_bays, "temperature": 25}
 
     def _log_car_activity(self, plate, action):
         with self.log_file.open("a") as f:
@@ -72,17 +83,3 @@ class CarPark:
                        "capacity": self.capacity,
                        "log_file": str(self.log_file)}, f)
 
-
-if __name__ == "__main__":
-    car_park = CarPark("123 Example Street", 2)
-    car_park.add_car('1E222333')
-    car_park.add_car('1E322333')
-    car_park.add_car('1E322553')
-    print(car_park)
-    print("available bays: ", car_park.available_bays)
-    display = Display(2, CarPark.available_bays, "Welcome!!", True)
-    display.update({"available_bays": CarPark.available_bays, "temperature": 25})
-    car_park.remove_car('1E222333')
-    car_park.remove_car('1E322333')
-    car_park.remove_car('1E322553')
-    

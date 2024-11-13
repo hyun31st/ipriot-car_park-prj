@@ -10,8 +10,10 @@ class Display:
 
     def update(self, data):
         for key, value in data.items():
+            setattr(self, key, value)
             print(f"{key}: {value}")
-            self.message = value
+            #self.message = value
+
 
 if __name__ == "__main__":
     display = Display(1,"Welcome to the car park",True)
