@@ -50,11 +50,10 @@ class CarPark:
 
     def update_displays(self):
         data = {"available_bays": self.available_bays, "temperature": 25}
-        # for display in self.displays:
-        #     # print(f"updating display {display.id}")
-        #     display.update(data)
-
-
+        for display in self.displays:
+            # display.update(data)
+            print(f"updating display {display.id}")
+            display.update(data)
 
     def add_car(self, plate):
         self.plates.append(plate)
@@ -82,4 +81,3 @@ class CarPark:
             json.dump({"location": self.location,
                        "capacity": self.capacity,
                        "log_file": str(self.log_file)}, f)
-

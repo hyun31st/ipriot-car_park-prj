@@ -377,7 +377,6 @@ Now consider, between the `CarPark`, `Sensor`, and `Display` classes, which clas
 >Here's a corrected version:
 ><br/> I think the Display class should be responsible for showing the current temperature. If there is a Config class, it could also be a good choice for handling this responsibility.<br/>
 ><br/>Q. Which class is responsible for the time (and why)?
-><br/>Here's the corrected version:
 ><br/>Same as the previous answer, I think the Display class should be responsible, unless there is a Config class. The Car class should only be responsible for managing car-related information.
 --------
 
@@ -782,6 +781,14 @@ Next, we'll create tests for the `Display` class. These tests will test the `__i
    ```bash
    git push --tags
    ```
+>**Note**: In commit 83ea764, I added "Ref. ChatGPT" for Display Class update.
+> I discussed this with the lecturer(Rafael A), and we agreed that how I added the code was inappropriate behaviour.
+> ![Conversation with Rafael A](images/Display_Class_unit_test_enquiry.png)
+> I was unable to figure it out myself and used ChatGPT to get a better opinion.
+> Below is the conversation that I had with ChatGPT.
+> https://chatgpt.com/share/67382099-fdfc-8011-98d5-331a9271453d
+
+
 
 ### Sensor unit tests
 
@@ -1082,7 +1089,8 @@ In your final submission, you must include any files you created or modified. Th
 1. Add a screenshot of the output of the `main.py` file:
 
    ```markdown
-   ![Main.py output](images/main-py.png)
+   ![Main.py output](images/main.py-1-of-2)
+   ![Main.py output](images/main.py-2-of-2)
    ```
 
 2. Commit your changes to the local repository. Tag the commit with `v1`, so your lecturer can find it. Ensure the commit includes the log and config files (though you would typically ignore them).

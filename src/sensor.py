@@ -28,13 +28,13 @@ class Sensor(ABC):
 class EntrySensor(Sensor):
     def update_car_park(self, plate):
         self.car_park.add_car(plate)
-        print(f"Incoming 🚘 vehicle detected at {datetime.now():%Y-%m-%d %H:%M:%S}. Plate: {plate}")
+        print(f"Incoming 🚘 vehicle detected at {datetime.now():%Y-%m-%d %H:%M:%S}. Plate: {plate}\n")
 
 
 class ExitSensor(Sensor):
     def update_car_park(self, plate):
         self.car_park.remove_car(plate)
-        print(f"Outgoing 🚗 vehicle detected at {datetime.now():%Y-%m-%d %H:%M:%S}. Plate: {plate}")
+        print(f"Outgoing 🚗 vehicle detected at {datetime.now():%Y-%m-%d %H:%M:%S}. Plate: {plate}\n")
 
 
     def _scan_plate(self):

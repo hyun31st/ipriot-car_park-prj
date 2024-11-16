@@ -12,8 +12,11 @@ def main():
     print(moondalup_car_park)
     print(moondalup_display)
 
-    for i in range(0, 3):
-        moondalup_car_park.register(moondalup_display)
+    moondalup_car_park.register(moondalup_entry_sensor)
+    moondalup_car_park.register(moondalup_exit_sensor)
+    moondalup_car_park.register(moondalup_display)
+
+    for i in range(0, 10):
         moondalup_entry_sensor.detect_vehicle()
 
     for i in range(0, 2):
