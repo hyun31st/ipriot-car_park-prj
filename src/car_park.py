@@ -23,12 +23,17 @@ class CarPark:
         self.log_file.touch(exist_ok=True)
         self.config_file = config_file if isinstance(config_file, Path) else Path(config_file)
         self.write_config()
+        self.celsius_temperature = 27
 
     @property
     def available_bays(self):
         # The available bays will be calculated by subtracting the current number of cars from the total capacity.
         # If the number of cars exceeds the capacity, the following code will show 0 instead of negative number
         return self.capacity - len(self.plates) if len(self.plates) < self.capacity else 0
+
+    @property
+    def fahrenheit_temperature(self):
+        return (self.celsius_temperature * 9 / 5) + 32
 
     def __str__(self):
         return f"Car park at {self.location}, with {self.capacity} bays."
@@ -49,7 +54,8 @@ class CarPark:
             pass
 
     def update_displays(self):
-        data = {"available_bays": self.available_bays, "temperature": 25}
+        data = {"available_bays": self.available_bays,
+                "temperature": f"{self.celsius_temperature} degrees Celsius, {self.fahrenheit_temperature:.0f} degrees Fahrenheit"}
         for display in self.displays:
             # display.update(data)
             print(f"updating display {display.id}")
