@@ -6,6 +6,12 @@ import json
 
 
 class CarPark:
+    '''
+    The CarPark class manages incoming and outgoing cars using Sensor classes
+    It also shows messages to users through the Display class.
+    The class uses a configuration file to store details like the location, capacity,
+    and log file settings.
+    '''
     def __init__(self, location="Unknown",
                  capacity=0,
                  plates=None,

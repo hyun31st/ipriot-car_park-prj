@@ -4,6 +4,13 @@ from display import Display
 
 
 def main():
+    '''
+    main function of the CarPark project.
+
+    This CarPark system is using Object-Oriented Programming (OOP) concepts in Python.
+    The system is consist of a car park, sensors, and displays to track the cars entering and
+    exiting and the availability of parking bays.
+    '''
     moondalup_car_park = CarPark("Moondalup", 100, log_file="moondalup.txt")
     moondalup_entry_sensor = EntrySensor(1, True, moondalup_car_park)
     moondalup_exit_sensor = ExitSensor(2, True, moondalup_car_park)

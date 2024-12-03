@@ -63,9 +63,8 @@ This guide provides detailed step-by-step instructions for completing the projec
 
 **Evidencing:**
 Include a screenshot of your GitHub repository **after** you have pushed your initial commit.
-
-```markdown
 ![Initial commit](images/initial_commit.png)
+```markdown
 ```
 
 ### Identify classes, methods, and attributes
@@ -103,9 +102,8 @@ Ensure you have completed the previous table and include at least two methods an
 
 **Evidencing:**
 Include a screenshot of your GitHub repository `src/` directory **after** you have pushed your changes.
-
-```markdown
 ![Added stubs for classes](images\stubs-for-classes.png)
+```markdown
 ```
 
 ### Add constructors and attributes to the classes
@@ -447,9 +445,9 @@ This time, we will push the tag to the remote repository:
    ```
 
 Add a screenshot of the GitHub repository after pushing the tag, showing the CarPark class with the new methods:
-
-```markdown
 ![Added methods to the car park class](images/methods-to-car-park.png)
+```markdown
+
 ```
 
 Answer the following questions:
@@ -710,10 +708,10 @@ if __name__ == "__main__":
 **Evidencing:**
 
 1. Add a screenshot of the output of the unit tests. If any failed, add a screenshot of the error message and a screenshot after you have fixed the errors:
-
-   ```markdown
 ![Initial Unit tests with error](images/unit-tests-with-error.png)
-   ![Unit tests without error](images/unit-tests-without-error.png)
+![Unit tests without error](images/unit-tests-without-error.png)
+   ```markdown
+
    ```
 
 2. Commit your changes to the local repository. Tag the commit with `s6` so your lecturer can find it:
@@ -770,9 +768,9 @@ Next, we'll create tests for the `Display` class. These tests will test the `__i
 **Evidencing:**
 
 1. Add a screenshot of the output of the unit tests. If any failed, add a screenshot of the error message and a screenshot after you have fixed the errors:
-
-   ```markdown
    ![Display Unit tests](images\display-unit-tests-with-error.png)
+   ```markdown
+
    ```
 
 2. Commit your changes to the local repository. Tag the commit with `s7` so your lecturer can find it.
@@ -1050,9 +1048,9 @@ We are going to do the latter:
 
 **Evidencing:**
 After you have merged your branch to main, push to your remote with the s10 tag. Add a screenshot of the GitHub repository after pushing the tag, showing the CarPark class with the new methods:
-
+![Added methods to the car park class](images\json-methods-to-car-park.png)
 ```markdown
-![Added methods to the car park class](images/jason-methods-to-car-park.png)
+
 ```
 
 ### Final step: build a car park!
@@ -1087,10 +1085,10 @@ In your final submission, you must include any files you created or modified. Th
 **Evidencing:**
 
 1. Add a screenshot of the output of the `main.py` file:
-
+   ![Main.py output](images/main.py-1-of-2.png)
+   ![Main.py output](images/main.py-2-of-2.png)
    ```markdown
-   ![Main.py output](images/main.py-1-of-2)
-   ![Main.py output](images/main.py-2-of-2)
+
    ```
 
 2. Commit your changes to the local repository. Tag the commit with `v1`, so your lecturer can find it. Ensure the commit includes the log and config files (though you would typically ignore them).
@@ -1101,15 +1099,14 @@ In your final submission, you must include any files you created or modified. Th
    ```
 
 4. Release your code on GitHub. You can do this by going to the releases section and selecting "Create a new release". Give the release a title ("Project Submission") and description. Then click "Publish release". Include a screenshot of the release:
-
-   ```markdown
    ![Create a release](images/create-release.png)
 
    ![Publish a release](images/publish-release.png)
+   ```markdown
+
    ```
 
 5. Congratulations! You have completed the project. You can now submit the assignment via Blackboard. Take the time to reflect on your work and write any notes and observations down.
 
 --------
 
-![Image of a car park on the moon](images/moon_park.png)

@@ -1,4 +1,8 @@
 class Display:
+    '''
+    The Display class shows messages and information to users,
+    such as a welcome message, the number of available bays, and the temperature.
+    '''
     def __init__(self, id, car_park, message = "", is_on = False):
         self.id = id
         self.message = message
